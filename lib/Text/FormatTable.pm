@@ -4,7 +4,7 @@ use Carp;
 use strict;
 use vars qw($VERSION);
 
-$VERSION = '0.01';
+$VERSION = '1.00';
 
 =head1 NAME
 
@@ -16,6 +16,7 @@ Text::FormatTable - Format text tables
  $table->head('a', 'b');
  $table->rule('=');
  $table->row('c', 'd');
+ print $table->render(20);
 
 =head1 DESCRIPTION
 
@@ -361,8 +362,8 @@ sub _preprocess_row_data($$)
 
 =item B<head>(I<$col1>, I<$col2>, ...)
 
-Add a header row using $col1, $col2, etc. as cell contents. Note that at the
-header rows are not treated specially.
+Add a header row using $col1, $col2, etc. as cell contents. Note that, at the
+moment, header rows are treated like normal rows.
 
 =cut
 
@@ -437,7 +438,7 @@ sub render($$)
 
 =head1 COPYRIGHT
 
-Copyright (c) 2001, Swiss Federal Institute of Technology, Zurich.
+Copyright (c) 2001,2002 Swiss Federal Institute of Technology, Zurich.
 All Rights Reserved.
 
 This module is free software; you can redistribute it and/or
