@@ -5,3 +5,4 @@ README
 lib/Text/FormatTable.pm
 example.pl
 test.pl
+META.yml                                 Module meta-data (added by MakeMaker)
